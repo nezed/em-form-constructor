@@ -1,0 +1,42 @@
+.tabs-list {
+    display: flex;
+    
+/*    Fixes different border-bottom-width of tabs */
+    align-items: flex-start;
+}
+
+.tab {
+    flex-grow: 1;
+    
+    padding: 20px;
+    
+    font-size: 9px;
+    line-height: 10px;
+    text-align: center;
+    
+    color: #BFBFBF;
+    border-bottom: 1px solid #E5E5E5;
+    
+    cursor: pointer;
+}
+
+.tab-active {
+    composes: tab;
+    
+    color: #7D88D4;
+    border-bottom: 2px solid #7D88D4;
+}
+
+.tab-pane {
+    margin: 13px 50px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content-active {
+    composes: tab-content;
+    
+    display: block;
+}

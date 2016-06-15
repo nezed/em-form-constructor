@@ -1,0 +1,48 @@
+.heading {
+    margin: 0;
+    padding: 20px;
+    background: #E5E5E5;
+    line-height: 1;
+    font-size: 1em;
+    text-align: center;
+}
+
+.tip {
+    display: block;
+    color: #BFBFBF;
+    font-size: 10px;
+    font-style: italic;
+    line-height: 1;
+    padding: 0 0 15px;
+    margin: 0 0 15px;
+    border-bottom: 1px solid #E5E5E5;
+
+    /*    normalize */
+    width: 100%;
+}
+
+.tab-title {
+    color: #4F4F4F;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1;
+    margin: 15px 0;
+}
+
+.description {
+    margin: 15px 0;
+    border: 1px solid #CCCCCC;
+    padding: 9px;
+    color: #999999;
+    font-family: "Helvetica Neue", Helvetica, "Open Sans", sans-serif;
+    font-size: 10px;
+    border-radius: 4px;
+    min-height: 120px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &,
+    &:focus {
+        outline: none;
+    }
+}

@@ -1,0 +1,51 @@
+.form-title {
+    font-size: 15px;
+    line-height: 27px;
+    margin: 0 0 20px;
+}
+
+.validation-message {
+    padding: 20px 25px;
+    margin: 20px 0;
+    font-size: 12px;
+    line-height: 15px;
+    background: #F2DEDE;
+    border: 1px solid #EBCCCC;
+    border-radius: 4px;
+    color: #A94442;
+    animation: slide-down 0.3s ease;
+}
+
+@keyframes slide-down {
+    from {
+        height: 0;
+        padding: 0 25px;
+    }
+
+    to {
+        height: 100%;
+        padding: 20px 25px;
+    }
+}
+
+.input-constructors {
+    width: 100%;
+    border-spacing: 14px;
+    font-size: 12px;
+    text-align: left;
+    margin: 0 -14px;
+}
+
+.table-header {
+    &::before {
+        display: table-cell;
+        content: '';
+        width: 12px;
+    }
+}
+
+.colHeading {
+    font-weight: normal;
+    font-size: 10px;
+    text-transform: uppercase;
+}

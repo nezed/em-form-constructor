@@ -1,0 +1,11 @@
+{
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "indentation": 4,
+        "selector-pseudo-class-no-unknown": [ true, {
+            "ignorePseudoClasses": [ "global", "local" ]
+        } ],
+        "color-hex-length": "long",
+        "color-hex-case": "upper"
+    }
+}

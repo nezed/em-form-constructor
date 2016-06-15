@@ -1,0 +1,56 @@
+.wrapper {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0;
+}
+
+.radio,
+.checkbox,
+.file {
+    display: none;
+}
+
+.custom-view {
+    display: inline-block;
+    content: '';
+    flex-shrink: 0;
+    align-self: flex-start;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #BFBFBF;
+    margin-right: 3px;
+}
+
+.radio + .custom-view {
+    border-radius: 50%;
+}
+
+.radio:checked + .custom-view,
+.checkbox:checked + .custom-view {
+    background: svg("checkmark", "[fill]: #7D88D4") 50% 50% no-repeat;
+}
+
+.input {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, "Open Sans", sans-serif;
+    font-size: 9px;
+    line-height: 1;
+    padding: 5px 7px;
+    border: 1px solid #CCCCCC;
+    color: #999999;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &,
+    &:focus {
+        outline: none;
+    }
+}
+
+.textarea {
+    composes: input;
+    padding: 9px;
+    font-size: 10px;
+    min-height: 120px;
+}
