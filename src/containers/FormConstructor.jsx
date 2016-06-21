@@ -54,7 +54,7 @@ class FormConstructor extends React.Component {
     }
 
     render() {
-        const {saved, fields} = this.props,
+        const {saved, fields, description} = this.props,
             {validationError} = this.state;
 
         return (
@@ -81,7 +81,11 @@ class FormConstructor extends React.Component {
                             }
                         </div>
                     :
-                        null
+                        <div className={ css.description } title="Description">
+                            {
+                                description
+                            }
+                        </div>
                 }
 
                 <table className={ css.inputConstructors }>
