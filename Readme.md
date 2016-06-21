@@ -3,7 +3,7 @@
 ### [Демо](https://nezed.github.io/em-form-constructor)
 
 ## Настройка рабочей среды
-* `sh npm install`
+* `npm install`
 * `npm start`
 
 ## "Велосипедостроительство"
