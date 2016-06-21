@@ -65,7 +65,7 @@ class OptionsConstructor extends React.Component {
                             }
                             <div className={ css.name }>
                                 <ContentEditable
-                                    editing
+                                    editing={ !option.name }
                                     rules={ {
                                         required: {
                                             error: 'Choice title cant be empty'

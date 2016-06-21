@@ -10,6 +10,8 @@
     background: #FDFDFD;
 }
 
+@custom-media --mobile (max-device-width: 768px);
+
 .module {
     display: flex;
     min-height: 100%;
@@ -21,6 +23,10 @@
     line-height: 1.5;
     color: #4F4F4F;
     border: 1px solid #E5E5E5;
+
+    @media (--mobile) {
+        flex-direction: column;
+    }
 }
 
 .aside {
@@ -28,6 +34,10 @@
     flex-shrink: 0;
     background: #FFFFFF;
     border-right: 1px solid #E5E5E5;
+
+    @media (--mobile) {
+        flex-basis: initial;
+    }
 }
 
 .main {
@@ -36,6 +46,10 @@
 
     /*    gray spacing + inner spacing */
     padding: 70px 100px 0;
+
+    @media (--mobile) {
+        padding: 15px 10px;
+    }
     box-sizing: border-box;
 
     /*    css-modules does not allow to compose pseudoelements… Great! */
@@ -59,9 +73,15 @@
 
         /*        gray spacing */
         top: 55px;
-        right: 50px;
         bottom: 0;
+        right: 50px;
         left: 50px;
+
+        @media (--mobile) {
+            top: 0;
+            left: 0;
+            right: 0;
+        }
         z-index: -1;
         border: 1px solid #E5E5E5;
         border-bottom: none;

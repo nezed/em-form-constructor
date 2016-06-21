@@ -88,7 +88,7 @@ class InputConstructor extends React.Component {
             <tr className={ css.module }>
                 <td className={ css.colName }>
                     <ContentEditable
-                        editing
+                        editing={ !name }
                         className={ isRequired ? css.fieldRequired : null }
                         rules={ {
                             required: {
@@ -125,7 +125,7 @@ class InputConstructor extends React.Component {
                         onToggleFieldRequired(id);
                     } } />
                 </td>
-                <td className={ css.col }>
+                <td className={ css.colRemove }>
                     <button className={ css.remove } onClick={ (event) => {
                         event.preventDefault();
                         onRemoveField(id);
