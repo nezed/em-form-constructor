@@ -1,3 +1,4 @@
+export const SWAP_FIELDS = 'SWAP_FIELDS';
 export const ADD_FIELD = 'ADD_FIELD';
 export const REMOVE_FIELD = 'REMOVE_FIELD';
 export const CHANGE_FIELD_NAME = 'CHANGE_FIELD_NAME';

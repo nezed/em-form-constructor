@@ -1,5 +1,12 @@
 import * as ActionTypes from '../constants/ActionTypes';
 
+export function SWAP_FIELDS(field, at) {
+    return {
+        type: ActionTypes.SWAP_FIELDS,
+        field,
+        at
+    };
+}
 export function ADD_FIELD(fieldType) {
     return {
         type: ActionTypes.ADD_FIELD,

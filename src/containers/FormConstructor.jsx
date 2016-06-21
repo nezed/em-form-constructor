@@ -1,9 +1,12 @@
 import FormValidate from '../components/FormValidate';
 import InputConstructor from './InputConstructor';
 
+import {DragDropContext} from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 import pure from 'pure-render-decorator';
 import css from './FormConstructor.css';
 
+@DragDropContext(HTML5Backend)
 @pure
 class FormConstructor extends React.Component {
     static propTypes = {
@@ -61,8 +64,8 @@ class FormConstructor extends React.Component {
                             </th>
                         </tr>
                         {
-                            fields.map((field) => (
-                                <InputConstructor { ...this.props } field={ field } key={ field.id } />
+                            fields.map((field, index) => (
+                                <InputConstructor { ...this.props } field={ field } key={ field.id } index={ index } />
                             ))
                         }
                     </tbody>

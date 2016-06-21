@@ -1,8 +1,32 @@
 import * as ActionTypes from '../constants/ActionTypes';
 import field from './field';
 
+const swap = (state, item, at) => {
+    const itemIndex = state.indexOf(item),
+        newState = state.slice(0);
+
+    if(!~itemIndex) {
+        return state;
+    }
+
+    newState.splice(itemIndex, 1);
+
+    const atIndex = newState.indexOf(at),
+        isLocatedBefore = itemIndex <= atIndex;
+
+    if(~atIndex) {
+        newState.splice(atIndex + isLocatedBefore, 0, item);
+    } else {
+        newState.push(item);
+    }
+
+    return newState;
+};
+
 const fields = (state = [], action) => {
     switch(action.type) {
+        case ActionTypes.SWAP_FIELDS:
+            return swap(state, action.field, action.at);
         case ActionTypes.ADD_FIELD:
             return [
                 ...state,
