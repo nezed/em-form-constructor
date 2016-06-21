@@ -4,6 +4,10 @@
     margin: 0 0 20px;
 }
 
+.save-btn {
+    float: right;
+}
+
 .validation-message {
     padding: 20px 25px;
     margin: 20px 0;

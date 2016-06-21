@@ -1,10 +1,10 @@
 import {createStore} from 'redux';
 import rootReducer from '../reducers';
 
-export default function configureStore(preloadedState) {
+export default function configureStore(initialState) {
     const store = createStore(
         rootReducer,
-        preloadedState
+        initialState
     );
 
     if(process.env.NODE_ENV !== 'production' && module.hot) {

@@ -2,6 +2,8 @@
     border: 1px solid #F2F2F2;
     color: #7F7F7F;
     font-size: 10px;
+    font-weight: normal;
+    line-height: 1.5;
     border-radius: 4px;
     box-sizing: border-box;
     min-width: 100px;
@@ -20,11 +22,20 @@
     outline: none;
 }
 
+.module_highlighted {
+    color: #BEC4EA;
+}
+
 .module_active {
     border: none;
     background: #7D88D4;
     background: radial-gradient(50% 155%, #9AA5EC 51%, #7D88D4 100%);
-    color: #FFFFFF;
+
+    &,
+    &:hover,
+    &:focus {
+        color: #FFFFFF;
+    }
 }
 
 .module_inSet {

@@ -8,11 +8,12 @@ export default (props) => {
 };
 
 function getClassName(props) {
-    const {active, inSet, disabled} = props;
+    const {active, inSet, disabled, highlighted} = props;
 
     return cn(css.module, {
         [css.module_active]: active,
         [css.module_inSet]: inSet,
-        [css.module_disabled]: disabled
+        [css.module_disabled]: disabled,
+        [css.module_highlighted]: highlighted
     });
 }
