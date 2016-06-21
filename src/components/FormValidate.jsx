@@ -63,6 +63,8 @@ export default class FormValidate extends React.Component {
         if(err && onInvalid) {
             onInvalid(err);
         }
+
+        this._valid = !err;
     }
 
     checkFormValidity() {

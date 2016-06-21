@@ -88,7 +88,7 @@ export default class ContentEditable extends React.Component {
 
     _isInvalid() {
         const {children} = this.props,
-            value = this._input && this._input.value || children;
+            value = this._input ? this._input.value : children;
 
         for(const validator of this._validators) {
             const error = validator(value, this.props);
@@ -146,7 +146,6 @@ export default class ContentEditable extends React.Component {
                 onChange(value);
             }
         });
-
     }
 
     onBlur = (event) => {
